@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>专业信息卡片</title>
+<style>
+    :root {
+        color-scheme: light dark;
+        --card-bg: #273046; /* 深灰蓝科技感背景 */
+        --text-color: #e5eaf5;
+        --accent: #6c63ff;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #3c3b7b, #222436);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    .card {
+        width: 70vw;
+        background: var(--card-bg);
+        color: var(--text-color);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 2.5rem;
+        /* 柔和投影效果，带科技蓝内外阴影 */
+        box-shadow:
+            0 8px 32px 0 rgba(58, 97, 162, 0.35),
+            0 1.5px 6px 0 rgba(33, 34, 54, 0.13),
+            0 0 0 1px rgba(108, 99, 255, 0.11); 
+    }
+
+    .card h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1.2rem;
+        color: var(--accent);
+    }
+
+    .section {
+        margin-bottom: 1.5rem;
+    }
+
+    .section h2 {
+        font-size: 1.1rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #7b85a2;
+        margin-bottom: 0.45rem;
+    }
+
+    .section p,
+    .section ul {
+        line-height: 1.6;
+        color: #b2bad4;
+    }
+
+    .section ul {
+        list-style: none;
+    }
+
+    .section li + li {
+        margin-top: 0.4rem;
+    }
+
+    a {
+        color: var(--accent);
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.2s ease;
+    }
+
+    a:hover {
+        border-color: var(--accent);
+    }
+</style>
+</head>
+<body>
+    <article class="card">
+        <h1>个人资料卡</h1>
+
+        <section class="section">
+            <h2>个人简历</h2>
+            <p>2009年至今，华东师范大学，数据科学与工程学院计算机教学部；博士，毕业于上海交通大学 模式识别与智能系统专业。</p>
+        </section>
+
+        <section class="section">
+            <h2>研究兴趣</h2>
+            <p>医学图像、计算机视觉以及人工智能、深度学习、大模型技术及其应用</p>
+        </section>
+
+        <section class="section">
+            <h2>论文</h2>
+            <ol>
+                <li>Xi Chen, Zhen Han, Xiaoping Liu, et al. Semantic boundary enhancement and position attention network with long-range dependency for semantic segmentation. APPLIED SOFT COMPUTING. p107511, 2021. （通讯作者，一区期刊）</li>
+                <li>Xiaoping Liu‚ Xin Yang. Best Cross-section Auto-detection in 3-D Echocardiac Images. Proc. MICCAI´06 Workshop on Computer Vision for Intravascular and Intracardiac Imaging. 2006‚ 107-114. （CCF C会议 医学图像领域顶级会议）</li>
+                <li>Wei Peng, XiaoPing Liu*, Lanping Wu. Automated Detection of Standard Image Planes in 3D Echocardiographic Images. International Conference on Collaborative Computing: Networking, Applications and Worksharing, 2021, LNICST, 350: 386-395. （CCF C 会议）</li>
+                <li>Xiaoping Liu, Xin Yang, Lanping Wu. Registration-based auto-detection of the optimal cross sections in 3D echocardiographic images, Proceedings of International Conference on Bioinformatics & Biomedical Technology, 2010.</li>
+                <li>Xiaoping Liu‚ Xin Yang‚ Langping Wu‚ Kun Sun‚ Yanfeng Shang‚ Rudi Dekelerck. Computer-aided Recognition of Four-chamber image plane in 3D Echocardiographic images of children [J]. Journal of electronic imaging. 2008‚ 17(3): 1-3.</li>
+                <li>Xiaoping Liu‚ Xin Yang. Automatic acquisition of the four-chamber view for 3D echocardiography [J]. IEICE Electronics Express. 2008‚ 5(9): 316-320.</li>
+                <li>刘小平‚杨新‚吴兰平‚孙锟. 基于模板匹配的心脏三维超声最优切面的搜寻. 生物医学工程学杂志. 2008‚ 25 (3): 491-496.</li>
+                <li>刘小平‚杨新‚吴兰平‚孙锟. 基于模板匹配的三维超声心动图四腔切面自动检测.中国图像图形学报. 2009‚14(9):1858-1861.</li>
+                <li>刘小平, 朱敏, 陈志云等. 基于科研素养培养的大学计算机基础教学的探索与实践. 教育教学论坛, 2016, 30(144-145).</li>
+                <li>刘小平, 朱敏, 李健等. 基于任务的体育系大学计算机基础课教学改革探索. 教育教学论坛, 2016, 28(111-112).</li>
+                <li>Jun Guo, Xiaoping Liu, Youguang Chen, Xinheng Wang. A revised feature extraction method for detecting text page up/down orientation. International Conference on Applied Superconductivity & Electromagnetic Devices. 2011.</li>
+                <li>刘艳, 朱敏, 刘小平等. 提高大学生计算素养的计算机基础实践课研究. 教育教学论坛, 2019, 9(28-29).</li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2>专利</h2>
+            <ol>
+                <li>基于多智能体的科研想法生成方法，陈曦、余玮伦、蒲戈光、王江涛、李庆利、刘小平、万成城、刘敏、高洪凯、陈志立；CN202510327064.0，申请日：2025-03-19。</li>
+                <li>面向类别不平衡的遥感图像在线持续目标检测方法，蒋捷、陈曦、刘敏、郑来文、刘小平、李志强、齐洪钢、李庆利、刘家朋；CN202210509147.8，授权日：2025-03-21。</li>
+                <li>大尺寸航空遥感影像的目标检测方法，王超杰、陈曦、李治洪、刘敏、郑来文、方涛、李庆利、刘小平；CN202111313879.1，授权日：2025-03-21。</li>
+                <li>面向类别不平衡的遥感图像在线持续目标检测方法，蒋捷、陈曦、刘敏、郑来文、刘小平、李志强、齐洪钢、李庆利、刘家朋；ZL202210509147.8，授权日：2022-05-11，中国。</li>
+                <li>基于神经网络的混合时间周期模式多变量时序预测方法，王晟、陈曦、郑来文、李治洪、刘敏、李庆利、齐洪钢、刘小平、周共健；ZL202111320985.2，授权日：2021-11-09，中国。</li>
+                <li>大尺寸航空遥感影像的目标检测方法，王超杰、陈曦、李治洪、刘敏、郑来文、方涛、李庆利、刘小平；ZL202111313879.1，授权日：2021-11-08，中国。</li>
+                <li>基于密集尺度动态网络的语义分割方法，李志强、陈曦、刘敏、郑来文、刘小平、姜宛玥、李庆利；CN202110574529.4，申请日：2021-05-25，中国。</li>
+                <li>用于不平衡高分辨率遥感影像的在线持续目标检测方法，蒋捷、陈曦、李志强、刘敏、刘小平、李庆利、方涛、霍宏；CN202110261065.1，申请日：2021-03-10，中国。</li>
+                <li>基于长距离依赖的语义边界增强方法，韩震、陈曦、刘小平、李志强、李庆利、朱敏、刘敏；ZL202010690090.7，申请日：2020-07-17，中国。</li>
+                <li>多尺度大感受野卷积神经网络的构建方法，陈曦、李志强、邓诗易、蒋捷、刘敏、李庆利、刘小平、方涛、霍宏；CN202010203659.2，申请日：2020-03-20，中国。</li>
+                <li>一种面向地理大数据的云计算资源调度方法及系统，刘静静、陈曦、刘敏、蒋捷、李志强、刘小平、李庆利、方涛、霍宏；CN202010222154.0，申请日：2020-03-26，中国。</li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2>教材</h2>
+            <ol>
+                <li>编著教材《论文排版实用教程——word与latex》，清华大学出版社，2015年，教育部文科教指委立项教材项目。</li>
+                <li>参编教材《大学人工智能基础》，华东师大出版社，2021年。</li>
+                <li>参编教材《实用人工智能》（2026年3月待出版）。</li>
+                <li>参编教材《人工智能与智慧教育》（2026年3月待出版）。</li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2>获奖</h2>
+            <ol>
+                <li>荣获上海市计算机应用能力大赛优秀指导教师奖。</li>
+                <li>2023年荣获华东师范大学教学设计比赛一等奖。</li>
+                <li>2022年荣获上海师范院校教师智慧教学大赛一等奖、长三角师范院校教师智慧教学大赛三等奖。</li>
+                <li>2021年先后荣获华为“先锋教师”荣誉称号和教育部-华为“智能基座”产教融合协同育人基地优秀教师奖。</li>
+                <li>指导学生参加国家级、省市级计算机竞赛，并多次获奖。</li>
+            </ol>
+        </section>
+    </article>
+</body>
+</html>
